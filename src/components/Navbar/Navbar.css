@@ -1,6 +1,6 @@
-.mihir {
-  background: linear-gradient(90deg, rgb(28, 13, 97) 0%, rgb(124, 87, 228) 100%);
-  height: 80px;
+.navbar-head {
+  background-color: black;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,15 +18,48 @@
   max-width: 1500px;
 }
 
-.navbar-logo {
+.navbar-brand {
+  background: #8A2387;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: 100%;
+
+    -webkit-background-clip: text;
+
+    -moz-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    -moz-text-fill-color: transparent;
+  font-family:cursive;
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 5px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
+}
+
+.navbar-brand:hover{
+  background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f22121, #4340e9, #3ccf17);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f22121, #4340e9, #3ccf17); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+
+    -webkit-background-clip: text;
+
+    -moz-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    -moz-text-fill-color: transparent;
 }
 
 .fa-typo3 {
@@ -36,37 +69,45 @@
 
 .nav-menu {
   display: grid;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 5rem;
+  margin-left:5rem;
   padding-top: 70px;
 }
 
+
 .nav-item {
-  height: 75px;
+  padding-left:25px;
+  height: 50px;
+  color:white;
 }
 
-.nav-links {
-  color: #fff;
+.nav-item:hover{
+  text-decoration:none;
+}
+
+.nav-link {
+  color: white;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   height: 100%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size:22px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size:20px;
 }
 
-.nav-links:hover {
-  margin-top:9px;
-  padding: 0.5rem 1rem;
-  background-color:rgb(119, 95, 228);
-  color:black;
+.nav-link:hover {
+  text-decoration:none;
+  border-radius:5px;
+  background-color:rgb(59, 56, 56);
+  color:white;
 }
 
 .fa-bars {
@@ -81,18 +122,59 @@
   display: none;
 }
 
+.mx-1 {
+  background-color:white;
+  color: black;
+}
+
+.mx-1:hover {
+  background-color:black;
+  color:white;
+}
+
+.login{
+  background: #ee0979;  
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.login:hover {
+  text-decoration:none;
+  background: -webkit-linear-gradient(to right, rgb(14, 20, 190), #1ace29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(14, 20, 190), #1ace29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+
+.logout {
+  background: #ee0979;  
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  text-decoration:none;
+  background: -webkit-linear-gradient(to right, rgb(14, 20, 190), #1ace29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(14, 20, 190), #1ace29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
   }
-
+  
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -106,16 +188,17 @@
     z-index: 1;
   }
 
-  .nav-links {
+  .nav-link {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
   }
 
-  .nav-links:hover {
+  .nav-link:hover {
+    margin-top:0px;
     background-color: #fff;
-    color: #242424;
+    color: #7c7676;
     border-radius: 0;
   }
 
@@ -142,16 +225,19 @@
   }
 
   .nav-links-mobile {
+    justify-content:center;
     display: block;
     text-align: center;
+    padding-top: 0px;
     margin: 2rem auto;
+    margin-top:0px;
+    padding: 10px 10px;
     border-radius: 4px;
-    width: 80%;
+    width: 50%;
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
     color: #fff;
-    padding: 14px 20px;
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
   }
@@ -160,5 +246,22 @@
     background: #fff;
     color: #242424;
     transition: 250ms;
+    text-decoration:none;
   }
+
+  .mx-1 {
+    display:none;
+  }
+
+  .logout {
+    background-color:white;
+    color:black;
+  }
+  
+  .logout:hover {
+    background-color:rgb(223, 217, 217);
+    color:black;
+  }
+
+
 }
